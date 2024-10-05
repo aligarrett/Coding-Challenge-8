@@ -74,8 +74,11 @@ marketing.addEmployee(jill);
 marketing.addEmployee(hill);
 
 // Calculate total salary for each department
-
 console.log(`Total salary for Sales: $${sales.getDepartmentSalary()}`);
 console.log(`Total salary with bonuses for Sales: $${sales.calculateTotalSalaryWithBonus()}`);
 console.log(`Total salary for Marketing: $${marketing.getDepartmentSalary()}`);
 console.log(`Total salary with bonuses for Marketing: $${marketing.calculateTotalSalaryWithBonus()}`);
+
+// Using getDetails method to display their details
+console.log(jack.getDetails()); // Output: Jack works as a Sales Rep in the Sales department. Their salary is: 35000
+console.log(witch.getDetails()); // Output: Witch, Sales Manager, Salary: $75000, Bonus: $10000
