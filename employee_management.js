@@ -42,4 +42,15 @@ class Department {
     getDepartmentSalary() {
         return this.employees.reduce((total,emp) => total + emp.salary, 0);
     }
+
+    // Task 4: Handle Bonuses for Managers
+
+    calculateTotalSalaryWithBonus() {
+        return this.employees.reduce((total,emp) => {
+            if (emp instanceof Manager) {
+                return total + emp.salary + emp.bonus; // Add both salary and bonus for managers
+            }
+            return total + emp.salary; // For employees, add just the salary
+        }, 0);
+    }
 }
