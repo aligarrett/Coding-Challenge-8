@@ -24,3 +24,22 @@ class Manager extends Employee {
         return `${this.name}, ${this.position}, Salary: $${this.salary}, Bonus: $${this.bonus}`;
     }
 }
+
+// Task 2: Create a Department Class
+
+class Department {
+    constructor (name) {
+        this.name = name;
+        this.employees = [];
+    }
+
+    // Method to add an employee
+    addEmployee(employee) {
+        this.employees.push(employee);
+    }
+
+    // Method to calculate total salary for the department
+    getDepartmentSalary() {
+        return this.employees.reduce((total,emp) => total + emp.salary, 0);
+    }
+}
